@@ -11,7 +11,7 @@ Globals:
     Timeout: 3
 
 Resources:
-  HelloWorldFunction2:
+  HelloWorldFunction3:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       CodeUri: hello_world/
@@ -36,7 +36,7 @@ Outputs:
     Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
   HelloWorldFunction:
     Description: "Hello World Lambda Function ARN"
-    Value: !GetAtt HelloWorldFunction2.Arn
+    Value: !GetAtt HelloWorldFunction3.Arn
   HelloWorldFunctionIamRole:
     Description: "Implicit IAM Role created for Hello World function"
-    Value: !GetAtt HelloWorldFunction2Role.Arn
+    Value: !GetAtt HelloWorldFunction3Role.Arn
