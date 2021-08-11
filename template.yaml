@@ -39,4 +39,4 @@ Outputs:
     Value: !GetAtt HelloWorldFunction2.Arn
   HelloWorldFunctionIamRole:
     Description: "Implicit IAM Role created for Hello World function"
-    Value: !GetAtt HelloWorld2FunctionRole.Arn
+    Value: !GetAtt HelloWorldFunction2Role.Arn
