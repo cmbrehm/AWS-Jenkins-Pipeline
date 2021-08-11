@@ -84,6 +84,7 @@ pipeline {
           sh '''
             sam package \
               --s3-bucket ${TESTING_ARTIFACTS_BUCKET} \
+              --s3-prefix ${TESTING_STACK_NAME} \
               --region ${TESTING_REGION} \
               --output-template-file packaged-testing.yaml
           '''
@@ -97,6 +98,7 @@ pipeline {
           sh '''
             sam package \
               --s3-bucket ${PROD_ARTIFACTS_BUCKET} \
+              --s3-prefix ${PROD_STACK_NAME} \
               --region ${PROD_REGION} \
               --output-template-file packaged-prod.yaml
           '''
@@ -128,7 +130,6 @@ pipeline {
               --capabilities CAPABILITY_IAM \
               --region ${TESTING_REGION} \
               --s3-bucket ${TESTING_ARTIFACTS_BUCKET} \
-              --s3-prefix ${TESTING_STACK_NAME} \
               --no-fail-on-empty-changeset \
               --role-arn ${TESTING_CLOUDFORMATION_EXECUTION_ROLE}
           '''
