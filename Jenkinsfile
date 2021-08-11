@@ -4,7 +4,7 @@ pipeline {
     PIPELINE_USER_CREDENTIAL_ID = 'aws-access'
     SAM_TEMPLATE = 'template.yaml'
     MAIN_BRANCH = 'main'
-    TESTING_STACK_NAME = 'AWS-Jenkins-Pipeline'
+    TESTING_STACK_NAME = 'AWS-Jenkins-Pipeline-DEV'
     TESTING_PIPELINE_EXECUTION_ROLE = 'arn:aws:iam::236361277585:role/aws-sam-cli-managed-dev-pipe-PipelineExecutionRole-GVEVVUPT7ZDM'
     TESTING_CLOUDFORMATION_EXECUTION_ROLE = 'arn:aws:iam::236361277585:role/aws-sam-cli-managed-dev-p-CloudFormationExecutionR-1WBKOXTZTYOIY'
     TESTING_ARTIFACTS_BUCKET = 'aws-sam-cli-managed-dev-pipeline-artifactsbucket-1vp0q5jl2dz76'
@@ -13,7 +13,7 @@ pipeline {
     // testing "sam package" and "sam deploy" commands.
     // TESTING_IMAGE_REPOSITORY = '0123456789.dkr.ecr.region.amazonaws.com/repository-name'
     TESTING_REGION = 'us-east-1'
-    PROD_STACK_NAME = 'AWS-Jenkins-Pipeline'
+    PROD_STACK_NAME = 'AWS-Jenkins-Pipeline-PROD'
     PROD_PIPELINE_EXECUTION_ROLE = 'arn:aws:iam::236361277585:role/aws-sam-cli-managed-prod-pip-PipelineExecutionRole-19P85HAXO6P36'
     PROD_CLOUDFORMATION_EXECUTION_ROLE = 'arn:aws:iam::236361277585:role/aws-sam-cli-managed-prod-CloudFormationExecutionR-1CBR5ASP5UCBI'
     PROD_ARTIFACTS_BUCKET = 'aws-sam-cli-managed-prod-pipeline-artifactsbucket-11zaj0qqdvyd4'
